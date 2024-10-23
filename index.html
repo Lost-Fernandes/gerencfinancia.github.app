@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Finanças</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Finanças</h1>
+        
+        <!-- Formulário para Adicionar/Editar Finança -->
+        <form id="financeForm">
+            <div>
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" placeholder="Digite a descrição">
+            </div>
+
+            <div>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" placeholder="Digite o valor">
+            </div>
+
+            <div>
+                <label for="tipo">Tipo:</label>
+                <select id="tipo">
+                    <option value="Receita">Receita</option>
+                    <option value="Despesa">Despesa</option>
+                </select>
+            </div>
+
+            <button type="submit" id="addBtn">Adicionar Finança</button>
+            <button type="button" id="updateBtn" style="display:none;">Atualizar Finança</button>
+        </form>
+
+        <!-- Tabela de Finanças -->
+        <table id="financesTable">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Valor (R$)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="financeList">
+                <!-- As finanças serão inseridas aqui -->
+            </tbody>
+        </table>
+
+        <!-- Gráfico de Finanças -->
+        <h2>Gráfico de Finanças</h2>
+        <canvas id="financeChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
